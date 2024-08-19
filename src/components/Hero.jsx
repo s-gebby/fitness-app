@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Hero() {
   return (
-    <div className='min-h-screen flex flex-col gap-10 items-center justify-center text-center [max-w-600px] w-full mx-auto'>
+    <div className='min-h-screen flex flex-col gap-10 items-center justify-center text-center [max-w-600px] w-full mx-auto p-6'>
         <div className='flex flex-col gap-4'></div>
 
         <p>IT'S TIME TO GET</p>
