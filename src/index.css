@@ -12,10 +12,10 @@ span {
 }
 
 .greenShadow {
-  box-shadow: 3px 3px 0 0 #60fa63;
+  box-shadow: 3px 3px 0 0 rgb(7 89 133);
 }
 
 .greenShadow:hover{
   transform: translate(-3px, -3px);
-  box-shadow: 6px 6px 0 0 #60fa63;
+  box-shadow: 6px 6px 0 0 rgb(7 89 133);
 }

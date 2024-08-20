@@ -7,8 +7,7 @@ import Workout from './components/Workout'
 function App() {
   
   return (
-    <main className='min-h-screen flex flex-col bg-gradient-to-r
-    from-lime-800 to lime-950 text-white text sm sm:text-base'>
+    <main className='min-h-screen flex flex-col animate-gray-fluff text-white text sm sm:text-base'>
       <Hero />
       <Generator />
       <Workout />
