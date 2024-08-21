@@ -16,12 +16,9 @@ function Header(props) {
   )
 }
 
-export default function Generator() {
+export default function Generator(props) {
+  const { muscles, setMuscles, poison, setPoison, goal, setGoal, updateWorkout} = props
   const [showModal, setShowModal] = useState(false)
-  const [poison, setPoison] = useState('individual')
-  const [muscles, setMuscles] = useState([])
-  const [goal, setGoal] = useState('strength_power')
-
 
   // let showModal = false (using state variable instead)
 
@@ -41,7 +38,7 @@ export default function Generator() {
     } 
     
     if (poison !== 'individual') {
-      setMuscles({muscleGroup})
+      setMuscles([muscleGroup])
       setShowModal(false)
       return
     } 
@@ -79,7 +76,7 @@ export default function Generator() {
               return (
                   <button onClick={() => {
                       updateMuscles(muscleGroup)
-                  }} key={muscleGroupIndex} className={'hover:text-sky-400 duration-200 ' + (muscles.includes(muscleGroup) ? ' text-sky-400' : ' ')}>
+                  }} key={muscleGroupIndex} className={'hover:text-sky-400 px-4 duration-200 ' + (muscles.includes(muscleGroup) ? ' text-sky-400' : ' ')}>
                       <p className='uppercase'>{muscleGroup.replaceAll('_', ' ')}</p>
                   </button>
               )
@@ -88,7 +85,7 @@ export default function Generator() {
         )}
       </div>
       <Header index={'03'} title={'Become Juggernaut'} description={"Select your Ulitimate Objective"}/>
-      <div className='grid grid-cols-3 gap-4'>
+      <div className='grid grid-cols-1 sm:grid-cols-3 gap-4'>
         {Object.keys(SCHEMES).map((scheme, schemeIndex) => {
           return (
             <button onClick={() => {
@@ -101,7 +98,7 @@ export default function Generator() {
           )
       })}
       </div>
-      <Button text={"Formulate"}></Button>
+      <Button func={updateWorkout} text={"Formulate"}></Button>
 
     </SectionWrapper>
   )
