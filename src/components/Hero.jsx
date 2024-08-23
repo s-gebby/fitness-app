@@ -12,7 +12,9 @@ export default function Hero() {
         lg:text-7xl'>Swole<span className='text-sky-400'>normous</span></h1>
         <p className='text-sm md:text-base font-light'>I hereby ackowledge that I may become <span className='text-sky-300 font-medium'>unbelievably jacked</span> and accept all risks of becoming the local <span className='text-sky-300 font-medium'>mass monstrosity</span>, afflicted with severe body dismorphia, and unable to fit through doors.
         </p>
-        <Button text={"Accept & Begin"}></Button>
+        <Button func={() => {
+          window.location.href = '#generate'
+        }} text={"Accept & Begin"}></Button>
     </div>
   )
 }
