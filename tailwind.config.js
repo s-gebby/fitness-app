@@ -7,7 +7,6 @@ export default {
   theme: {
     extend: {
       colors: {
-        'electric-yellow': 'rgb(255, 255, 51)',
       },
       animation: {
         "cosmic-wave":"cosmic-wave 5s ease infinite"
